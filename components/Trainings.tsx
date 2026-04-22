@@ -16,66 +16,68 @@ const Training = ({
   imageRight = true,
 }: TrainingProps) => {
   return (
-    <div
-      className={`flex flex-col ${
-        imageRight ? "md:flex-row" : "md:flex-row-reverse"
-      } items-center justify-between gap-[64px] py-16 px-6 md:px-16 max-w-[1440px] mx-auto`}
-    >
-      {/* Text Content */}
-      <div className="flex-1 flex flex-col justify-between space-y-6">
-        <div className="space-y-6">
-          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl text-[#1A1A1A]">
-            {title}
-          </h2>
+    <div className="max-w-[1440px] mx-auto py-16">
+      {/* Main Content Box */}
+      <div
+        className={`flex flex-col ${
+          imageRight ? "md:flex-row" : "md:flex-row-reverse"
+        } items-center justify-between gap-[75px] p-[30px]`}
+      >
+        {/* Text Content */}
+        <div className="flex-1 flex flex-col justify-between space-y-6"> 
+          <div className="space-y-6">
+            <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl text-[#1A1A1A]">
+              {title}
+            </h2>
 
-          <p className="text-gray-600 leading-relaxed text-base md:text-lg">
-            {description}
-          </p>
+            <p className="text-gray-600 leading-relaxed text-base md:text-lg">
+              {description}
+            </p>
+          </div>
+
+          <ul className="space-y-4 pt-2 pl-10">
+            {items.map((item, index) => (
+              <li key={index} className="flex items-start gap-3 group">
+                <span className="mt-1 flex-shrink-0">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M13 2L3 14H12L11 22L21 10H12L13 2Z"
+                      fill="#571244"
+                      stroke="#571244"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+                <span className="text-gray-700 font-medium group-hover:text-[#571244] transition-colors">
+                  {item}
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
 
-        <ul className="space-y-4 pt-2">
-          {items.map((item, index) => (
-            <li key={index} className="flex items-start gap-3 group">
-              <span className="mt-1 flex-shrink-0">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M13 2L3 14H12L11 22L21 10H12L13 2Z"
-                    fill="#571244"
-                    stroke="#571244"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </span>
-              <span className="text-gray-700 font-medium group-hover:text-[#571244] transition-colors">
-                {item}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Image Content */}
-      <div className="flex-1 w-full max-w-[556px]">
-        <div
-          className={`overflow-hidden shadow-xl ${
-            imageRight
-              ? "rounded-tl-[35px] rounded-tr-[24px] rounded-br-[24px] rounded-bl-[24px]"
-              : "rounded-tr-[35px] rounded-tl-[24px] rounded-br-[24px] rounded-bl-[24px]"
-          }`}
-        >
-          <img
-            src={imageSrc}
-            alt={title}
-            className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-500"
-          />
+        {/* Image Content */}
+        <div className="flex-1 w-full max-w-[612px]">
+          <div
+            className={`overflow-hidden shadow-xl ${
+              imageRight
+                ? "rounded-tl-[50px] rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]"
+                : "rounded-tr-[10px] rounded-tl-[50px] rounded-br-[10px] rounded-bl-[10px]"
+            }`}
+          >
+            <img
+              src={imageSrc}
+              alt={title}
+              className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -101,7 +103,7 @@ export default function TrainingPage() {
     {
       title: "Personalised Individual Training",
       description:
-        "Begin a journey of lifelong learning and professional development with Tobams Group's diverse range of training programs for individuals. From technical skills mastery to soft skills enhancement, our courses cover a wide spectrum of topics to meet the evolving needs of today's professionals.",
+        "Begin a journey of lifelong learning and professional development with Tobams Group's diverse range of training programs for individuals.",
       items: [
         "Leadership Development",
         "Soft Skills Development",
@@ -116,7 +118,7 @@ export default function TrainingPage() {
     {
       title: "Capacity Development",
       description:
-        "At Tobams Group, we empower individuals and organizations through tailored training programs, expert-led workshops, and personalized mentorship. We are committed to your success and growth. We are dedicated to providing a comprehensive suite of benefits designed to foster your development and success.",
+        "At Tobams Group, we empower individuals and organizations through tailored training programs, expert-led workshops, and personalized mentorship.",
       items: [
         "Tailored Training Programs",
         "Expert-Led Workshops",

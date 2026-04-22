@@ -11,12 +11,11 @@ const Management = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-white p-6">
       {/* Main Container */}
-      <div className="flex flex-col md:flex-row w-full max-w-[1200px] bg-[#1A0314] rounded-[24px] p-8 md:p-12 gap-12 overflow-hidden shadow-2xl">
-        
+      <div className="flex flex-col md:flex-row w-full max-w-[1400px] bg-[#1A0314] rounded-[24px] p-8 md:p-12 gap-12 overflow-hidden shadow-2xl">
         {/* Image Section */}
         <div className="flex-1">
           <img 
-            src="/management-team.jpg" // Replace with your actual image path
+            src="/management.jpg" 
             alt="Management team collaborating" 
             className="w-full h-full object-cover rounded-[16px] min-h-[350px]"
           />
