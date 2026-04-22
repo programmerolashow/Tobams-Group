@@ -12,12 +12,12 @@ const LMS = () => {
     ];
 
     return (
-        <section className="bg-[#FDF2F4] py-16 md:py-24 px-4 overflow-hidden">
+        <section className="bg-[#5712441A] py-16 md:py-24 px-4 overflow-hidden">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
                 {/* Left Side: Circular Image */}
                 <div className="relative flex justify-center lg:justify-start">
-                    <div className="relative w-[320px] h-[320px] md:w-[450px] md:h-[450px] overflow-hidden rounded-full border-8 border-white shadow-xl">
+                    <div className="relative w-[556.88px] h-[568px] overflow-hidden rounded-[357.57px] shadow-xl">
                         <Image
                             src="/lms-image.jpg" // Ensure you export this from Figma
                             alt="LMS Professional Team"
@@ -34,13 +34,14 @@ const LMS = () => {
                     </h2>
 
                     <div className="bg-[#E6D5E0]/40 p-8 rounded-xl border border-[#3F103F]/5">
-                        <p className="text-gray-700 leading-relaxed mb-6 text-sm md:text-base">
+                        <p className="text-black leading-relaxed mb-6 text-sm md:text-base">
                             TG Academy is a hub of knowledge and skill-building resources designed to
                             empower tech talents on their learning journey. From technical courses
                             covering the latest programming languages and development frameworks to
                             soft skills training in leadership, effective communication and project
                             management. TG Academy offers a wide range of courses to cater to diverse
-                            learning needs.
+                            learning needs. With accessible and interactve learning materials, individuals
+                            can enhance their skills and stay ahead in today's competitive tech landscape.
                         </p>
 
                         <h3 className="text-[#3F103F] font-bold mb-4">Some of our courses include:</h3>
