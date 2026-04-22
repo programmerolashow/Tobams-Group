@@ -44,8 +44,8 @@ const Transformation = () => {
             />
           </div>
 
-          {/* Features Section (NOW MATCHES IMAGE HEIGHT) */}
-          <div className="w-full max-w-[640px] h-[400px] flex flex-col justify-between bg-white/30 py-8 px-5 rounded-lg">
+          {/* Features Section */}
+          <div className="w-full max-w-[640px] h-[400px] flex flex-col bg-white/30 py-12 px-5 rounded-lg">
 
             {/* Feature Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -74,8 +74,8 @@ const Transformation = () => {
               ))}
             </div>
 
-            {/* Button */}
-            <button className="flex items-center justify-center gap-2 bg-[#571244] text-white w-fit py-3 px-8 rounded-[8px] font-semibold hover:bg-[#450e36] transition-colors group">
+            {/* Button with EXACT 20px spacing */}
+            <button className="mt-[20px] flex items-center justify-center gap-2 bg-[#571244] text-white w-fit py-3 px-8 rounded-[8px] font-semibold hover:bg-[#450e36] transition-colors group">
               Learn More
               <svg
                 className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"

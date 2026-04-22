@@ -4,6 +4,7 @@ import LMS from "@/components/LMS";
 import Training from "@/components/Trainings";
 import Management from "@/components/Management";
 import Transformation from "@/components/Transformation";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
             <Training />
             <Management />
             <Transformation />
+            <Testimonials />
         </main>
     );
 }
