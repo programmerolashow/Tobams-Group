@@ -3,15 +3,6 @@ import Image from 'next/image';
 const Hero = () => {
     return (
         <section className="relative w-full h-[500px] flex items-center justify-center text-center px-4 overflow-hidden">
-            <div className="absolute top-6 left-6 w-40 h-10 z-20">
-                <Image
-                    src="/Tobams-logo.png"
-                    alt="Tobams Logo"
-                    fill
-                    priority
-                    className="object-contain"
-                />
-            </div>
             {/* Background Image with next/image optimization */}
             <Image
                 src="/hero-image.jpg"
@@ -34,12 +25,12 @@ const Hero = () => {
                     Training and Development
                 </h1>
 
-                <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                <p className="w-full max-w-[1077px] font-['Nunito_Sans'] text-[18px] leading-[1.5] text-center text-[#FFFFFF]">
                     Our comprehensive range of programs and resources is designed to enhance skills,
                     broaden knowledge, and propel careers forward in today&apos;s ever-evolving landscape.
                 </p>
 
-                <button className="bg-tobams-dark text-white px-8 py-3 rounded-md font-medium hover:bg-opacity-90 transition-all">
+                <button className="bg-tobams-dark text-white px-8 py-3 rounded-md font-medium hover:bg-opacity-90 transition-all mt-10">
                     Book a Consultation
                 </button>
             </div>
