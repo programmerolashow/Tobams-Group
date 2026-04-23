@@ -7,9 +7,9 @@ const Navbar = () => {
         <nav className="w-full bg-white border-b border-gray-100">
             {/* Top Bar: Logo and Buttons */}
             <div className="flex flex-row w-full max-w-[1440px] h-[104px] border-b border-gray-200 justify-between pt-6 pb-6 pr-16 pl-16 items-center">
-                <div className="relative w-[165.71429443359375px] h-[64px]">
+                <div className="relative w-[180px] h-[80px]">
                     <Image
-                        src="/Tobams-logo.png" // Replace with actual logo path
+                        src="/Tobams-logo.png"
                         alt="Tobams Group"
                         fill
                         className="object-contain"

@@ -57,7 +57,19 @@ const Testimonials = () => {
     {
       name: "Zoe Mantis",
       role: "Founder, Alpha Group",
-      text: "As an IT professional, Tobams Group's Tech Talent Development program sharpened my skills. The hands-on approach and mentorship are invaluable.",
+      text: "The Creative and Digital Media services at Tobams Group brought our ideas to life. Simple, creative, and impactful – exactly what we needed for our projects.",
+      avatar: "/Zoe-Mantis.jpg"
+    },
+    {
+      name: "Zoe Mantis",
+      role: "Founder, Alpha Group",
+      text: "Tobams Group's Digital Marketing tips transformed my small business. Their guidance is simple, effective, and perfect for anyone looking to grow online.",
+      avatar: "/Zoe-Mantis.jpg"
+    },
+    {
+      name: "Zoe Mantis",
+      role: "Founder, Alpha Group",
+      text: "As an IT professional, Tobams Group's Tech Talent Development program sharpened my skills. The hands-on approach and mentorship are invaluable",
       avatar: "/Zoe-Mantis.jpg"
     }
   ];
