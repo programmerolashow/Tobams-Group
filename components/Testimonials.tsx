@@ -1,21 +1,20 @@
-import React from 'react';
+"use client";
+
+import React, { useRef } from 'react';
 
 const TestimonialCard = ({ name, role, text, avatar }: { name: string, role: string, text: string, avatar: string }) => (
-  <div className="flex-shrink-0 w-full md:w-[400px] bg-white rounded-[16px] p-8 shadow-sm border-l-[3px] border-[#EF4353] flex flex-col justify-between transition-all hover:shadow-md">
+  <div className="flex-shrink-0 w-[85vw] md:w-[413px] bg-white rounded-[16px] p-8 shadow-sm border-l-[4px] border-[#EF4353] flex flex-col justify-between transition-all hover:shadow-md h-full">
     <div>
-      {/* Header: Avatar & Info */}
       <div className="flex items-center gap-4 mb-6">
         <div className="w-12 h-12 rounded-full overflow-hidden border border-gray-100 flex-shrink-0">
           <img src={avatar} alt={name} className="w-full h-full object-cover" />
         </div>
         <div className="flex flex-col">
-          <h4 className="font-bold text-[#1A1A1A] text-sm md:text-base leading-tight">{name}</h4>
-          <p className="text-gray-400 text-[11px] md:text-xs font-medium uppercase tracking-wider">{role}</p>
+          <h4 className="font-bold text-[#1A1A1A] text-sm md:text-[15px] leading-tight">{name}</h4>
+          <p className="text-gray-400 text-[10px] md:text-[11px] font-medium leading-tight mt-1">{role}</p>
         </div>
       </div>
-
-      {/* Testimonial Body */}
-      <p className="text-gray-600 text-sm md:text-base leading-[1.6] font-normal">
+      <p className="text-[#4B5563] text-sm md:text-[15px] leading-[1.6] font-normal">
         {text}
       </p>
     </div>
@@ -23,6 +22,19 @@ const TestimonialCard = ({ name, role, text, avatar }: { name: string, role: str
 );
 
 const Testimonials = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const { scrollLeft, clientWidth } = scrollRef.current;
+      const scrollTo = direction === 'left' 
+        ? scrollLeft - (clientWidth * 0.8) 
+        : scrollLeft + (clientWidth * 0.8);
+      
+      scrollRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
+    }
+  };
+
   const data = [
     {
       name: "Aisha Yusuf",
@@ -51,30 +63,39 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="bg-[#FDFDFD] py-20 px-6 md:px-16 overflow-hidden">
+    <section className="bg-white py-20 overflow-hidden">
       <div className="max-w-[1440px] mx-auto">
         
-        {/* Section Heading */}
-        <h2 className="font-['Montserrat'] font-bold text-4xl md:text-5xl text-[#1A1A1A] text-center mb-16">
+        <h2 className="font-['Montserrat'] font-bold text-3xl md:text-[40px] text-[#1A1A1A] text-center mb-16">
           Testimonials
         </h2>
 
-        {/* Cards Container */}
-        <div className="flex flex-col md:flex-row gap-6 justify-center items-stretch">
+        {/* Scrollable container with padding-left to match heading start point */}
+        <div 
+          ref={scrollRef}
+          className="flex flex-row gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-10 pl-6 md:pl-16 pr-6 md:pr-16"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
           {data.map((item, index) => (
             <TestimonialCard key={index} {...item} />
           ))}
         </div>
 
-        {/* Slider Controls */}
-        <div className="flex justify-center md:justify-end gap-3 mt-12">
-          <button className="w-10 h-10 rounded-lg bg-[#FDE7EB] flex items-center justify-center text-[#EF4353] hover:bg-[#fbc2cc] transition-colors">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        {/* Controls Container matched to the right edge of page content */}
+        <div className="max-w-[1440px] mx-auto px-6 md:px-16 flex justify-end gap-3 mt-4">
+          <button 
+            onClick={() => scroll('left')}
+            className="w-10 h-10 rounded-lg bg-[#FDE7EB] flex items-center justify-center text-[#EF4353] hover:bg-[#fbc2cc] transition-colors active:scale-95"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
               <path d="M15 18l-6-6 6-6" />
             </svg>
           </button>
-          <button className="w-10 h-10 rounded-lg bg-[#FDE7EB] flex items-center justify-center text-[#EF4353] hover:bg-[#fbc2cc] transition-colors">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <button 
+            onClick={() => scroll('right')}
+            className="w-10 h-10 rounded-lg bg-[#FDE7EB] flex items-center justify-center text-[#EF4353] hover:bg-[#fbc2cc] transition-colors active:scale-95"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
               <path d="M9 18l6-6-6-6" />
             </svg>
           </button>

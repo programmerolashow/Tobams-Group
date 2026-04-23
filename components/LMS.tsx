@@ -1,70 +1,70 @@
-import Image from 'next/image';
-import { ArrowUpRight } from 'lucide-react';
+import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
 const LMS = () => {
-    const courses = [
-        "Business Analysis",
-        "Design Thinking",
-        "Effective Communication",
-        "Entrepreneurship",
-        "Career Development",
-        "Business Model",
-    ];
+  const courses = [
+    "Business Analysis",
+    "Design Thinking",
+    "Effective Communication",
+    "Entrepreneurship",
+    "Career Development",
+    "Business Model",
+  ];
 
-    return (
-        <section className="bg-[#5712441A] py-16 md:py-24 px-4 overflow-hidden">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+  return (
+    <section className="bg-white py-[40px] overflow-hidden">
+      {/* FULL WIDTH CONTAINER */}
+      <div className="w-full bg-[#F1E9F0] flex flex-col lg:flex-row items-center gap-12 md:px-16 py-12">
 
-                {/* Left Side: Circular Image */}
-                <div className="relative flex justify-center lg:justify-start">
-                    <div className="relative w-[556.88px] h-[568px] overflow-hidden rounded-[357.57px] shadow-xl">
-                        <Image
-                            src="/lms-image.jpg" // Ensure you export this from Figma
-                            alt="LMS Professional Team"
-                            fill
-                            className="object-cover"
-                        />
-                    </div>
-                </div>
+        {/* LEFT: IMAGE */}
+        <div className="flex justify-center lg:justify-start w-full lg:w-1/2">
+          <div className="relative w-[320px] sm:w-[450px] lg:w-[556.88px] h-[350px] sm:h-[500px] lg:h-[568px] overflow-hidden rounded-[357.57px] shadow-sm">
+            <Image
+              src="/lms-image.jpg"
+              alt="LMS Professional Team"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
 
-                {/* Right Side: Content */}
-                <div className="flex flex-col gap-6">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#3F103F]">
-                        Learning Management System
-                    </h2>
+        {/* RIGHT: CONTENT */}
+        <div className="flex flex-col gap-6 w-full lg:w-1/2 px-4 md:px-0">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#571244]">
+            Learning Management System
+          </h2>
 
-                    <div className="bg-[#E6D5E0]/40 p-8 rounded-xl border border-[#3F103F]/5">
-                        <p className="text-black leading-relaxed mb-6 text-sm md:text-base">
-                            TG Academy is a hub of knowledge and skill-building resources designed to
-                            empower tech talents on their learning journey. From technical courses
-                            covering the latest programming languages and development frameworks to
-                            soft skills training in leadership, effective communication and project
-                            management. TG Academy offers a wide range of courses to cater to diverse
-                            learning needs. With accessible and interactve learning materials, individuals
-                            can enhance their skills and stay ahead in today's competitive tech landscape.
-                        </p>
+          <div className="bg-[#E6D5E0]/60 p-6 md:p-8 rounded-xl">
+            <p className="text-black leading-relaxed mb-6 text-sm md:text-base">
+              TG Academy is a hub of knowledge and skill-building resources designed to
+              empower tech talents on their learning journey. From technical courses
+              covering the latest programming languages and development frameworks to
+              soft skills training in leadership, effective communication and project
+              management.
+            </p>
 
-                        <h3 className="text-[#3F103F] font-bold mb-4">Some of our courses include:</h3>
+            <h3 className="text-[#571244] font-bold mb-4">
+              Some of our courses include:
+            </h3>
 
-                        {/* 2-Column List for Mobile/Desktop */}
-                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-4">
-                            {courses.map((course, index) => (
-                                <li key={index} className="flex items-center gap-2 text-sm text-gray-800">
-                                    <span className="w-1.5 h-1.5 bg-[#3F103F] rounded-full" />
-                                    {course}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-y-3 gap-x-2">
+              {courses.map((course, index) => (
+                <li key={index} className="flex items-center gap-2 text-[13px] text-gray-800">
+                  <span className="w-1.5 h-1.5 bg-black rounded-full" />
+                  {course}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-                    <button className="flex items-center justify-center gap-2 bg-[#3F103F] text-white px-8 py-3 rounded-md w-fit font-medium hover:bg-opacity-90 transition-all">
-                        Learn More
-                        <ArrowUpRight size={18} />
-                    </button>
-                </div>
-            </div>
-        </section>
-    );
+          <button className="flex items-center justify-center gap-2 bg-[#571244] text-white px-8 py-3 rounded-md w-fit font-medium hover:bg-opacity-90 transition-all">
+            Learn More
+            <ArrowUpRight size={18} />
+          </button>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default LMS;

@@ -7,6 +7,7 @@ import Transformation from "@/components/Transformation";
 import Consultant from "@/components/Consultant";
 import Booking from "@/components/Booking"
 import Testimonials from "@/components/Testimonials";
+import Contacts from "@/components/Contacts";
 
 export default function Home() {
     return (
@@ -20,6 +21,7 @@ export default function Home() {
             <Consultant />
             <Booking />
             <Testimonials />
+            <Contacts />
         </main>
     );
 }
