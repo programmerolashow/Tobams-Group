@@ -49,10 +49,19 @@ const Navbar = () => {
 
                 {/* Mobile Menu Toggle */}
                 <button 
-                    className="md:hidden p-2 text-tobams-dark"
+                    className="md:hidden flex items-center justify-center w-11 h-11 bg-black rounded-[12px] shadow-md hover:bg-gray-900 transition-all active:scale-95"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    aria-label="Toggle Menu"
                 >
-                    {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+                    {isMenuOpen ? (
+                        <X size={24} color="white" strokeWidth={3} />
+                    ) : (
+                        <div className="flex flex-col gap-[4.5px] items-center justify-center transition-all">
+                            <div className="w-6 h-[2.5px] bg-white rounded-full" />
+                            <div className="w-6 h-[2.5px] bg-white rounded-full" />
+                            <div className="w-6 h-[2.5px] bg-white rounded-full" />
+                        </div>
+                    )}
                 </button>
             </div>
 
