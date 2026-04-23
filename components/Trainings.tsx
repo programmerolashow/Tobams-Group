@@ -19,9 +19,9 @@ const Training = ({
     <div className="max-w-[1440px] mx-auto py-16">
       {/* Main Content Box */}
       <div
-        className={`flex flex-col ${
+        className={`flex flex-col-reverse ${
           imageRight ? "md:flex-row" : "md:flex-row-reverse"
-        } items-center justify-between gap-[75px] p-[30px]`}
+        } items-center justify-between gap-10 md:gap-[75px] p-6 md:p-[30px]`}
       >
         {/* Text Content */}
         <div className="flex-1 flex flex-col justify-between space-y-6"> 
@@ -35,7 +35,7 @@ const Training = ({
             </p>
           </div>
 
-          <ul className="space-y-4 pt-2 pl-10">
+          <ul className="space-y-4 pt-2 pl-4 md:pl-10">
             {items.map((item, index) => (
               <li key={index} className="flex items-start gap-3 group">
                 <span className="mt-1 flex-shrink-0">

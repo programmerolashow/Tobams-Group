@@ -4,7 +4,7 @@ const Booking = () => {
   return (
     <div className="flex items-center justify-center min-h-[400px] bg-white p-6">
       {/* Main Container */}
-      <div className="w-full max-w-[1134px] bg-[#571244] rounded-[12px] py-[64px] px-8 md:px-16 text-center shadow-lg border-[1px] border-purple-400/30">
+      <div className="w-full max-w-[1134px] bg-[#571244] rounded-[12px] py-12 md:py-[64px] px-6 md:px-16 text-center shadow-lg border-[1px] border-purple-400/30">
         
         {/* Text Content */}
         <h2 className="text-white text-lg md:text-2xl font-medium leading-relaxed mb-8">

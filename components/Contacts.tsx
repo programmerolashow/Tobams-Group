@@ -104,7 +104,7 @@ const Contacts = () => {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
 
             {/* LEFT SECTION: Registered Offices (Spans 8 columns) */}
-            <div className="md:col-span-8">
+            <div className="md:col-span-8 order-2 md:order-1">
               <h5 className="text-white font-bold text-lg mb-6">Registered Offices</h5>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -129,7 +129,7 @@ const Contacts = () => {
             </div>
 
             {/* RIGHT SECTION: Contact Info (Spans 4 columns) */}
-            <div className="md:col-span-4 md:border-l border-white/10 md:pl-10 h-full">
+            <div className="md:col-span-4 md:border-l border-white/10 md:pl-10 h-full order-1 md:order-2">
               <h5 className="text-white font-bold text-lg mb-6">Contact Information</h5>
 
               <div className="space-y-4">
@@ -150,17 +150,17 @@ const Contacts = () => {
       </div>
 
       {/* BOTTOM BAR */}
-      <div className="border-t border-white/10 px-6 md:px-16 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white">
-        <p>Copyright © Tobams Group, 2024. All rights reserved.</p>
+      <div className="border-t border-white/10 px-6 md:px-16 py-6 flex flex-col-reverse md:flex-row justify-between items-center gap-4 text-xs text-white">
+        <p className="opacity-80">Copyright © Tobams Group, 2024. All rights reserved.</p>
 
-        <div className="flex gap-6">
-          <span className="hover:text-white cursor-pointer">
+        <div className="flex flex-wrap justify-center gap-6">
+          <span className="underline md:no-underline hover:text-white cursor-pointer transition-colors">
             Terms and Conditions
           </span>
-          <span className="hover:text-white cursor-pointer">
+          <span className="underline md:no-underline hover:text-white cursor-pointer transition-colors">
             Privacy Policy
           </span>
-          <span className="hover:text-white cursor-pointer">
+          <span className="underline md:no-underline hover:text-white cursor-pointer transition-colors">
             Cookies Policy
           </span>
         </div>

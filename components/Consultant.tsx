@@ -23,7 +23,7 @@ const Consultant = () => {
   return (
     <div className="min-h-screen bg-[#F9F9F9] flex items-center justify-center pt-6">
       {/* Main Container */}
-      <div className="flex flex-col w-full max-w-full h-fit bg-[#571244]/10 py-12 px-16 gap-[10px]">
+      <div className="flex flex-col w-full max-w-full h-fit bg-[#571244]/10 py-12 px-6 md:px-16 gap-6">
 
         {/* Header Section */}
         <div className="mb-12">

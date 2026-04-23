@@ -14,11 +14,16 @@ const LMS = () => {
   return (
     <section className="bg-white py-[40px] overflow-hidden">
       {/* FULL WIDTH CONTAINER */}
-      <div className="w-full bg-[#F1E9F0] flex flex-col lg:flex-row items-center gap-12 md:px-16 py-12">
+      <div className="w-full bg-[#F1E9F0] flex flex-col lg:flex-row items-center gap-8 lg:gap-12 px-6 md:px-16 py-12">
+        
+        {/* Mobile Title - Visible only on mobile/tablet */}
+        <h2 className="text-3xl font-bold text-[#571244] lg:hidden text-center mb-2">
+          Learning Management System
+        </h2>
 
         {/* LEFT: IMAGE */}
         <div className="flex justify-center lg:justify-start w-full lg:w-1/2">
-          <div className="relative w-[320px] sm:w-[450px] lg:w-[556.88px] h-[350px] sm:h-[500px] lg:h-[568px] overflow-hidden rounded-[357.57px] shadow-sm">
+          <div className="relative w-[300px] sm:w-[450px] lg:w-[556.88px] h-[330px] sm:h-[500px] lg:h-[568px] overflow-hidden rounded-full lg:rounded-[357.57px] shadow-sm">
             <Image
               src="/lms-image.jpg"
               alt="LMS Professional Team"
@@ -29,18 +34,15 @@ const LMS = () => {
         </div>
 
         {/* RIGHT: CONTENT */}
-        <div className="flex flex-col gap-6 w-full lg:w-1/2 px-4 md:px-0">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#571244]">
+        <div className="flex flex-col gap-6 w-full lg:w-1/2 px-0 lg:px-0">
+          {/* Desktop Title - Visible only on large screens */}
+          <h2 className="hidden lg:block text-3xl md:text-4xl font-bold text-[#571244]">
             Learning Management System
           </h2>
 
           <div className="bg-[#E6D5E0]/60 p-6 md:p-8 rounded-xl">
             <p className="text-black leading-relaxed mb-6 text-sm md:text-base">
-              TG Academy is a hub of knowledge and skill-building resources designed to
-              empower tech talents on their learning journey. From technical courses
-              covering the latest programming languages and development frameworks to
-              soft skills training in leadership, effective communication and project
-              management.
+              TG Academy is a hub of knowledge and skill-building resources designed to empower tech talents on their learning journey. From technical courses covering the latest programming languages and development frameworks to soft skills training in leadership, effective communication and project management, TG Academy offers a wide range of courses to cater to diverse learning needs. With accessible and interactive learning materials, individuals can enhance their skills and stay ahead in today's competitive tech landscape.
             </p>
 
             <h3 className="text-[#571244] font-bold mb-4">

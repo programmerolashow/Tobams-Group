@@ -36,16 +36,16 @@ const Transformation = () => {
         <div className="flex flex-col md:flex-row gap-12 items-stretch">
 
           {/* Image Section */}
-          <div className="w-full max-w-[660px] h-[400px]">
+          <div className="w-full max-w-[660px] h-auto md:h-[400px]">
             <img
               src="/Transformation.jpg"
               alt="Transformation Hub Visual"
-              className="w-full h-full object-cover rounded-[16px] shadow-sm"
+              className="w-full h-[300px] md:h-full object-cover rounded-[16px] shadow-sm"
             />
           </div>
 
           {/* Features Section */}
-          <div className="w-full max-w-[640px] h-[400px] flex flex-col bg-white/30 py-12 px-5 rounded-lg">
+          <div className="w-full max-w-[640px] h-auto md:h-[400px] flex flex-col bg-white/30 py-8 md:py-12 px-5 rounded-lg">
 
             {/* Feature Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
