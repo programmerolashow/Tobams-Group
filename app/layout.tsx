@@ -8,7 +8,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Training and Development",
+  title: "Tobams Group",
   description: "Professional training and learning solutions",
 };
 
