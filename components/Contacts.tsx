@@ -153,15 +153,15 @@ const Contacts = () => {
       <div className="border-t border-white/10 px-6 md:px-16 py-6 flex flex-col-reverse md:flex-row justify-between items-center gap-4 text-xs text-white">
         <p className="opacity-80">Copyright © Tobams Group, 2024. All rights reserved.</p>
 
-        <div className="flex flex-wrap justify-center gap-6">
-          <span className="underline md:no-underline hover:text-white cursor-pointer transition-colors">
-            Terms and Conditions
-          </span>
-          <span className="underline md:no-underline hover:text-white cursor-pointer transition-colors">
+        <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 md:gap-6">
+          <span className="order-1 underline md:no-underline hover:text-white cursor-pointer transition-colors">
             Privacy Policy
           </span>
-          <span className="underline md:no-underline hover:text-white cursor-pointer transition-colors">
+          <span className="order-2 underline md:no-underline hover:text-white cursor-pointer transition-colors">
             Cookies Policy
+          </span>
+          <span className="order-3 w-full md:w-auto text-center underline md:no-underline hover:text-white cursor-pointer transition-colors">
+            Terms and Conditions
           </span>
         </div>
       </div>

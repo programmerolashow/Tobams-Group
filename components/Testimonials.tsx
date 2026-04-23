@@ -3,7 +3,7 @@
 import React, { useRef } from 'react';
 
 const TestimonialCard = ({ name, role, text, avatar }: { name: string, role: string, text: string, avatar: string }) => (
-  <div className="flex-shrink-0 w-[85vw] md:w-[413px] bg-white rounded-[16px] p-8 shadow-sm border-l-[4px] border-[#EF4353] flex flex-col justify-between transition-all hover:shadow-md h-full">
+  <div className="flex-shrink-0 w-[calc(100vw-48px)] md:w-[413px] snap-center bg-white rounded-[16px] p-8 shadow-sm border-l-[4px] border-[#EF4353] flex flex-col justify-between transition-all hover:shadow-md h-full mb-4 md:mb-0">
     <div>
       <div className="flex items-center gap-4 mb-6">
         <div className="w-12 h-12 rounded-full overflow-hidden border border-gray-100 flex-shrink-0">
@@ -27,9 +27,10 @@ const Testimonials = () => {
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
       const { scrollLeft, clientWidth } = scrollRef.current;
+      // Scroll by approximately one card width
       const scrollTo = direction === 'left' 
-        ? scrollLeft - (clientWidth * 0.8) 
-        : scrollLeft + (clientWidth * 0.8);
+        ? scrollLeft - clientWidth
+        : scrollLeft + clientWidth;
       
       scrollRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
     }
@@ -75,17 +76,17 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="bg-white py-20 overflow-hidden">
+    <section className="bg-white py-12 md:py-20 overflow-hidden">
       <div className="max-w-[1440px] mx-auto">
         
-        <h2 className="font-bold text-3xl md:text-[40px] text-[#1A1A1A] text-center mb-16">
+        <h2 className="font-bold text-3xl md:text-[40px] text-[#1A1A1A] text-center mb-10 md:mb-16">
           Testimonials
         </h2>
 
-        {/* Scrollable container with padding-left to match heading start point */}
+        {/* Scrollable container with snap points */}
         <div 
           ref={scrollRef}
-          className="flex flex-row gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-10 pl-6 md:pl-16 pr-6 md:pr-16"
+          className="flex flex-row gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth pb-6 md:pb-10 px-6 md:px-16"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {data.map((item, index) => (
@@ -94,20 +95,20 @@ const Testimonials = () => {
         </div>
 
         {/* Controls Container matched to the right edge of page content */}
-        <div className="max-w-[1440px] mx-auto px-6 md:px-16 flex justify-end gap-3 mt-4">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-16 flex justify-center md:justify-end gap-3 mt-4">
           <button 
             onClick={() => scroll('left')}
-            className="w-10 h-10 rounded-lg bg-[#FDE7EB] flex items-center justify-center text-[#EF4353] hover:bg-[#fbc2cc] transition-colors active:scale-95"
+            className="w-12 h-12 md:w-10 md:h-10 rounded-lg bg-[#FDE7EB] flex items-center justify-center text-[#EF4353] hover:bg-[#fbc2cc] transition-colors active:scale-95 shadow-sm"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
               <path d="M15 18l-6-6 6-6" />
             </svg>
           </button>
           <button 
             onClick={() => scroll('right')}
-            className="w-10 h-10 rounded-lg bg-[#FDE7EB] flex items-center justify-center text-[#EF4353] hover:bg-[#fbc2cc] transition-colors active:scale-95"
+            className="w-12 h-12 md:w-10 md:h-10 rounded-lg bg-[#FDE7EB] flex items-center justify-center text-[#EF4353] hover:bg-[#fbc2cc] transition-colors active:scale-95 shadow-sm"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
               <path d="M9 18l6-6-6-6" />
             </svg>
           </button>
@@ -117,5 +118,6 @@ const Testimonials = () => {
     </section>
   );
 };
+
 
 export default Testimonials;
