@@ -21,7 +21,7 @@ const Transformation = () => {
             Learning With Our CEO:
           </p>
 
-          <h1 className="font-['Montserrat'] font-bold text-3xl md:text-5xl text-[#571244] mb-6 leading-tight">
+          <h1 className="font-bold text-3xl md:text-5xl text-[#571244] mb-6 leading-tight">
             Transformation Hub With Jite Newton
           </h1>
 

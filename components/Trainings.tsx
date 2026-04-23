@@ -26,7 +26,7 @@ const Training = ({
         {/* Text Content */}
         <div className="flex-1 flex flex-col justify-between space-y-6"> 
           <div className="space-y-6">
-            <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl text-[#1A1A1A]">
+            <h2 className="font-bold text-3xl md:text-4xl text-[#1A1A1A]">
               {title}
             </h2>
 

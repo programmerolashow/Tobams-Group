@@ -27,7 +27,7 @@ const Consultant = () => {
 
         {/* Header Section */}
         <div className="mb-12">
-          <h1 className="font-['Montserrat'] font-bold text-3xl md:text-5xl text-[#571244] mb-4 leading-tight">
+          <h1 className="font-bold text-3xl md:text-5xl text-[#571244] mb-4 leading-tight">
             Training The Consultant
           </h1>
           <p className="text-[#571244] font-semibold text-sm md:text-base mb-8">

@@ -23,7 +23,7 @@ const Management = () => {
 
         {/* Content Section */}
         <div className="flex-1 flex flex-col justify-center text-white">
-          <h1 className="font-['Montserrat'] font-bold text-3xl md:text-5xl mb-6 leading-tight">
+          <h1 className="font-bold text-3xl md:text-5xl mb-6 leading-tight">
             Management Development Program
           </h1>
 

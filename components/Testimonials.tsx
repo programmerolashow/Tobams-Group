@@ -78,7 +78,7 @@ const Testimonials = () => {
     <section className="bg-white py-20 overflow-hidden">
       <div className="max-w-[1440px] mx-auto">
         
-        <h2 className="font-['Montserrat'] font-bold text-3xl md:text-[40px] text-[#1A1A1A] text-center mb-16">
+        <h2 className="font-bold text-3xl md:text-[40px] text-[#1A1A1A] text-center mb-16">
           Testimonials
         </h2>
 
