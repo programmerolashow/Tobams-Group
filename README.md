@@ -54,3 +54,17 @@ This adjustment was made to:
 - Maintain a clean and intuitive user experience across all screen sizes
 
 The change was implemented using Tailwind’s responsive utilities (`md:`, `lg:`), ensuring that the original design intent is preserved on larger screens while optimizing smaller viewports.
+
+# Training & Development Landing Page
+
+## Live URL
+https://tobams-group-pi.vercel.app
+
+---
+
+## Overview
+This project is a pixel-perfect implementation of a Training & Development landing page based on the provided Figma design. It was built as part of a frontend assessment to demonstrate the ability to translate UI designs into clean, responsive, and production-ready code using modern tools.
+
+
+### The repository
+https://github.com/programmerolashow/Tobams-Group.git

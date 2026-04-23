@@ -10,6 +10,9 @@ const geist = Geist({
 export const metadata: Metadata = {
   title: "Tobams Group",
   description: "Professional training and learning solutions",
+  icons: {
+    icon: "/Tobams-logo.png",
+  },
 };
 
 export default function RootLayout({
