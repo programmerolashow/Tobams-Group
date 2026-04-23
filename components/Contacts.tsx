@@ -7,7 +7,7 @@ const Contacts = () => {
   return (
     <section className="bg-[#11040E] text-white">
       {/* CTA SECTION */}
-      <div className="border-b border-white/70 px-6 md:px-16 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="border-b border-white/70 px-6 md:px-16 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div>
           <p className="text-sm font-normal text-white/70 mb-2">
             Ready to be a part of something extraordinary?

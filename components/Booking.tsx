@@ -8,7 +8,12 @@ const Booking = () => {
         
         {/* Text Content */}
         <h2 className="text-white text-lg md:text-2xl font-medium leading-relaxed mb-8">
-          Want to accelerate professional growth and development at your organisation?
+          <span className="lg:hidden">
+            Don&apos;t just dream it—let&apos;s build it! Click now and start your project with Tobams Group. Your journey to digital excellence begins here.
+          </span>
+          <span className="hidden lg:inline">
+            Want to accelerate professional growth and development at your organisation?
+          </span>
           <span className="block mt-1">See how we can help.</span>
         </h2>
 

@@ -21,14 +21,12 @@ const Transformation = () => {
             Learning With Our CEO:
           </p>
 
-          <h1 className="font-bold text-3xl md:text-5xl text-[#571244] mb-6 leading-tight">
+          <h1 className="font-bold text-3xl md:text-5xl text-[#571244] italic mb-6 leading-tight">
             Transformation Hub With Jite Newton
           </h1>
 
           <p className="text-gray-700 leading-relaxed text-sm md:text-base max-w-[1000px]">
-            Transformation Hub with Jite Newton is a flagship webinar series curated by the CEO, Dr. Jite Newton.
-            Designed to elevate career trajectories and leadership capabilities, this exclusive event offers
-            invaluable insights and strategies for personal and professional growth.
+            Transformation Hub with Jite Newton is a flagship webinar series curated by the CEO, Dr. Jite Newton. Designed to elevate career trajectories and leadership capabilities, this exclusive event offers invaluable insights and strategies for personal and professional growth. Whether you're seeking to advance your career or enhance your leadership skills, the Transformation Hub provides a transformative learning experience to unlock your full potential and drive success in your endeavours.
           </p>
         </div>
 

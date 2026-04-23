@@ -103,7 +103,7 @@ export default function TrainingPage() {
     {
       title: "Personalised Individual Training",
       description:
-        "Begin a journey of lifelong learning and professional development with Tobams Group's diverse range of training programs for individuals.",
+        "Begin a journey of lifelong learning and professional development with Tobams Group's diverse range of training programs for individuals. From technical skills mastery to soft skills enhancement, our courses cover a wide spectrum of topics to meet the evolving needs of today's professionals.",
       items: [
         "Leadership Development",
         "Soft Skills Development",
@@ -118,7 +118,7 @@ export default function TrainingPage() {
     {
       title: "Capacity Development",
       description:
-        "At Tobams Group, we empower individuals and organizations through tailored training programs, expert-led workshops, and personalized mentorship.",
+        "At Tobams Group, we empower individuals and organizations through tailored training programs, expert-led workshops, and personalized mentorship. We are committed to your success and growth. We are dedicated to providing a comprehensive suite of benefits designed to foster your development and success:",
       items: [
         "Tailored Training Programs",
         "Expert-Led Workshops",

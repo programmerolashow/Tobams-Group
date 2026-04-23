@@ -45,7 +45,7 @@ const Management = () => {
             {benefits.map((benefit, index) => (
               <div 
                 key={index} 
-                className="flex items-center gap-3 bg-[#571244]/40 border border-white/10 rounded-[8px] py-3 px-5 transition-transform hover:translate-x-2 duration-300"
+                className="flex items-center gap-3 bg-[#8F6182] border border-white/10 rounded-[8px] py-3 px-5 transition-transform hover:translate-x-2 duration-300"
               >
                 <span className="flex-shrink-0">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

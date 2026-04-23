@@ -57,9 +57,16 @@ const LMS = () => {
                 </li>
               ))}
             </ul>
+
+            {/* Mobile/Tablet Button: Inside the card */}
+            <button className="lg:hidden mt-5 flex items-center justify-center gap-2 bg-[#571244] text-white px-8 py-3 rounded-md w-fit font-medium hover:bg-opacity-90 transition-all">
+              Learn More
+              <ArrowUpRight size={18} />
+            </button>
           </div>
 
-          <button className="flex items-center justify-center gap-2 bg-[#571244] text-white px-8 py-3 rounded-md w-fit font-medium hover:bg-opacity-90 transition-all">
+          {/* Desktop Button: Outside the card */}
+          <button className="hidden lg:flex items-center justify-center gap-2 bg-[#571244] text-white px-8 py-3 rounded-md w-fit font-medium hover:bg-opacity-90 transition-all mt-5">
             Learn More
             <ArrowUpRight size={18} />
           </button>
